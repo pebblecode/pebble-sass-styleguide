@@ -116,7 +116,7 @@ be used; one example is shown below.
 <a name="example"></a>
 ## 5. Example SCSS
 
-Examples of all the above formating guides can be found in `examples.scss`.
+Examples of all the above formating guides can be found in [examples.scss`](https://github.com/pebblecode/pebble-sass-styleguide/blob/master/examples.scss).
 
 ---
 
