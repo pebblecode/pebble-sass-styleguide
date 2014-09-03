@@ -21,7 +21,7 @@ Adapted from Nicolas Gallagher's [idiomatic-css](https://github.com/necolas/idio
   when many people are contributing to it.
 * Strictly enforce the agreed-upon style.
 * If in doubt when deciding upon a style use existing, common patterns.
-* Use [Sass](http://sass-lang.com) and the [`SCSS` syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html#sass_syntax_differences).
+* Use [Sass](http://sass-lang.com) and the [SCSS syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html#sass_syntax_differences).
 *
 
 
@@ -37,12 +37,9 @@ Adapted from Nicolas Gallagher's [idiomatic-css](https://github.com/necolas/idio
 
 Aim to write code that is self documenting and easy to understand. However sometimes comments will be useful for yourself or other developers. For example
 
-Write comments in the Sass Syntax `// comment` **NOT** the CSS syntax `/* comment */`
+Use the Sass Syntax for comments `// comment`
+**DO NOT** use the CSS syntax for comments `/* comment */`
 
-```// good comments
-
-/* bad comments */
-```
 
 <a name="format"></a>
 ## 4. Format
@@ -65,9 +62,6 @@ Write comments in the Sass Syntax `// comment` **NOT** the CSS syntax `/* commen
   character of the ruleset.
 * Separate each ruleset by a blank line.
 
-
-
-```
 
 #### Declaration order
 
