@@ -1,0 +1,393 @@
+// ==========================================================================
+// STYLE GUIDE EXAMPLES
+//
+// eamples for the pebble {code} style guide
+// https://github.com/pebblecode/pebble-sass-styleguide
+// ==========================================================================
+
+
+// Use one discrete selector per line in multi-selector rulesets.
+// ==========================================================================
+// incorrect
+.class-one, .class-two {
+  width: 100%;
+  height: 100%;
+}
+
+// correct
+.class-one,
+.class-two {
+  width: 100%;
+  height: 100%;
+}
+
+
+// Include a single space before the opening brace of a ruleset.
+// ==========================================================================
+// incorrect
+.class-one{
+  width: 100%;
+  height: 100%;
+}
+
+// correct
+.class-one {
+  width: 100%;
+  height: 100%;
+}
+
+
+// Include one declaration per line in a declaration block.
+// ==========================================================================
+// incorrect
+.class-one{
+  width: 100%; height: 100%;
+}
+
+// correct
+.class-one {
+  width: 100%;
+  height: 100%;
+}
+
+
+// Use one (two spaces) level of indentation for each declaration.
+// ==========================================================================
+// incorrect
+.class-one{
+  width: 100%;
+    height: 100%;
+padding: 10%;
+}
+
+// correct
+.class-one {
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+}
+
+
+// Include a single space after the colon of a declaration.
+// ==========================================================================
+// incorrect
+.class-one{
+  width:100%;
+}
+
+// correct
+.class-one {
+  width: 100%;
+}
+
+
+// Use lowercase and shorthand hex values, e.g., `#aaa`.
+// ==========================================================================
+// incorrect
+.class-one{
+  background-color: #EE4F7E;
+  color: #F09;
+}
+
+// correct
+.class-one {
+  background-color: #ee4f7e;
+  color: #f09;
+}
+
+
+// Use double quotes wherever possible, e.g., `content: ""`.
+// ==========================================================================
+// incorrect
+.class-one{
+  background-image: url( 'img/pic.jpg' );
+}
+
+// correct
+.class-one {
+  background-image: url( "img/pic.jpg" );
+}
+
+
+// Quote attribute values in selectors, e.g., `input[ type="checkbox" ]`.
+// ==========================================================================
+// incorrect
+input[ type=checkbox ] {
+  // rules
+}
+
+// correct
+input[ type="checkbox" ] {
+  // rules
+}
+
+
+// Avoid specifying units for zero-values, e.g., `margin: 0`.
+// ==========================================================================
+// incorrect
+.class-one {
+  margin: 0px;
+  padding: 0%;
+}
+
+// correct
+.class-one {
+  margin: 0;
+  padding: 0;
+}
+
+
+// Include a space after each comma in comma-separated property or function values.
+// ==========================================================================
+// incorrect
+.class-one {
+  color: hsl( 180,50,100 );
+}
+
+// correct
+.class-one {
+  color: hsl( 180, 50, 100 );
+}
+
+
+// Include a semi-colon at the end of the last declaration in a declaration block.
+// ==========================================================================
+// incorrect
+.class-one {
+  width: 100%;
+  height: 100%;
+  margin: 20px
+}
+
+// correct
+.class-one {
+  width: 100%;
+  height: 100%;
+  margin: 20px;
+}
+
+
+// Place the closing brace of a ruleset in the same column as the first character of the ruleset.
+// ==========================================================================
+// incorrect
+.class-one {
+  width: 100%;
+  height: 100%; }
+
+// incorrect
+.class-one {
+  width: 100%;
+  height: 100%;
+  }
+
+// correct
+.class-one {
+  width: 100%;
+  height: 100%;
+}
+
+
+// Separate each ruleset by a blank line.
+// ==========================================================================
+// incorrect
+.class-one {
+  width: 100%;
+  height: 100%;
+}
+.class-two {
+  margin: 10%;
+  padding: 10%;
+}
+
+// correct
+.class-one {
+  width: 100%;
+  height: 100%;
+}
+
+.class-two {
+  margin: 10%;
+  padding: 10%;
+}
+
+
+// Put spaces inside brackets for better readability.
+// ==========================================================================
+// incorrect
+.class-one {
+  color: hsl(180, 100, 50);
+}
+
+// correct
+.class-one {
+  color: hsl( 180, 100, 50 );
+}
+
+
+// Leave a new line after each nested ruleset.
+// ==========================================================================
+// incorrect
+.class-one {
+  width: 100%;
+  height: 100%;
+  .class-two {
+    margin: 10%;
+    padding: 5%;
+  }
+}
+
+// correct
+.class-one {
+  width: 100%;
+  height: 100%;
+
+  .class-two {
+    margin: 10%;
+    padding: 5%;
+  }
+}
+
+
+// Limit nesting to 3 level deep absolute maximum.
+// ==========================================================================
+// incorrect
+.app-header {
+  width: 100%;
+  height: 20%;
+
+  .class-one {
+    margin: 10%;
+
+    .class-two {
+      padding: 5%;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}
+
+// correct
+.app-header {
+  width: 100%;
+  height: 20%;
+
+  .class-one {
+    margin: 10%;
+  }
+}
+
+.app-header.class-one.class-two {
+  padding: 5%;
+
+  &:hover {
+    color: red;
+  }
+}
+
+
+// Avoid large numbers of nested rules. Break them up when readability starts to be affected.
+// ==========================================================================
+// incorrect
+.app-header {
+  width: 100%;
+  height: 20%;
+  position: relative;
+  margin: 5%;
+  padding: 10%;
+
+  .class-one {
+    margin: 10%;
+    color: blue;
+    font-size: 18px;
+    border: 2px solid blue;
+
+    &:hover {
+      color: red;
+      border-color: red;
+    }
+  }
+
+  &:hover {
+    &::before {
+      background: yellow;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: green;
+  }
+}
+
+// correct
+.app-header {
+  width: 100%;
+  height: 20%;
+  position: relative;
+  margin: 5%;
+  padding: 10%;
+
+  &:hover::before {
+    background-color: yellow;
+  }
+}
+
+.app-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: green;
+}
+
+.app-header.class-one {
+  margin: 10%;
+  color: blue;
+  font-size: 18px;
+  border: 2px solid blue;
+
+  &:hover {
+    color: red;
+    border-color: red;
+  }
+}
+
+// Declaration order
+// ==========================================================================
+.class-one {
+  $variable: "string"; // scoped variables.
+  // new line
+
+  @extend .extend-class; // @extend rules
+  @include clearfix; // @import rules
+  // new line
+
+  width: 100%; // rules for top-level selector
+  height: 100%; // rules for top-level selector
+  background-color: red; // rules for top-level selector
+  font-size: 18px; // rules for top-level selector
+  // new line
+
+  .class-two { // nested elements
+    margin: 10%; // nested elements rules
+  }
+  // new line
+
+  &:hover { // pseudo classes
+    background-color: blue; // pseudo classes rules
+  }
+  // new line
+
+  @media screen and ( max-width: 40em ) { // media queries
+    width: 50%; // media queries rules
+  }
+}
