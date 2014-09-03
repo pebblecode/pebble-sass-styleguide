@@ -37,8 +37,7 @@ Adapted from Nicolas Gallagher's [idiomatic-css](https://github.com/necolas/idio
 
 Aim to write code that is self documenting and easy to understand. However sometimes comments will be useful for yourself or other developers. For example
 
-Use the Sass Syntax for comments `// comment`
-
+Use the Sass Syntax for comments `// comment`<br />
 **DO NOT** use the CSS syntax for comments `/* comment */`
 
 
@@ -47,39 +46,39 @@ Use the Sass Syntax for comments `// comment`
 
 #### Use one discrete selector per line in multi-selector rulesets.
 ```css
-// incorrect
+/* incorrect */
 .class-one, .class two {
-  // rules
+  /* rules */
 }
 
-// correct
+/* correct */
 .class-one,
 .class two {
-  // rules
+  /* rules */
 }
 ```
 
 #### Include a single space before the opening brace of a ruleset.
 ```css
-// incorrect
+/* incorrect */
 .class-one{
-  // rules
+  /* rules */
 }
 
-// correct
+/* correct */
 .class-one {
-  // rules
+  /* rules */
 }
 ```
 
 #### Include one declaration per line in a declaration block.
 ```css
-// incorrect
+/* incorrect */
 .class-one{
   width: 100%; height: 100%;
 }
 
-// correct
+/* correct */
 .class-one {
   width: 100%;
   height: 100%;
@@ -88,14 +87,14 @@ Use the Sass Syntax for comments `// comment`
 
 #### Use one (two spaces) level of indentation for each declaration.
 ```css
-// incorrect
+/* incorrect */
 .class-one{
   width: 100%;
     height: 100%;
 padding: 10%;
 }
 
-// correct
+/* correct */
 .class-one {
   width: 100%;
   height: 100%;
@@ -105,12 +104,12 @@ padding: 10%;
 
 #### Include a single space after the colon of a declaration.
 ```css
-// incorrect
+/* incorrect */
 .class-one{
   width:100%;
 }
 
-// correct
+/* correct */
 .class-one {
   width: 100%;
 }
@@ -118,13 +117,13 @@ padding: 10%;
 
 #### Use lowercase and shorthand hex values, e.g., `#aaa`.
 ```css
-// incorrect
+/* incorrect */
 .class-one{
   background-color: #EE4F7E;
   color: #F09;
 }
 
-// correct
+/* correct */
 .class-one {
   background-color: #ee4f7e;
   color: #f09;
@@ -133,12 +132,12 @@ padding: 10%;
 
 #### Use double quotes wherever possible, e.g., `content: ""`.
 ```css
-// incorrect
+/* incorrect */
 .class-one{
   background-image: url( 'img/pic.jpg' );
 }
 
-// correct
+/* correct */
 .class-one {
   background-image: url( "img/pic.jpg" );
 }
@@ -146,26 +145,26 @@ padding: 10%;
 
 #### Quote attribute values in selectors, e.g., `input[ type="checkbox" ]`.
 ```css
-// incorrect
+/* incorrect */
 input[ type=checkbox ] {
-  // rules
+  /* rules */
 }
 
-// correct
+/* correct */
 input[ type="checkbox" ] {
-  // rules
+  /* rules */
 }
 ```
 
 #### Avoid specifying units for zero-values, e.g., `margin: 0`.
 ```css
-// incorrect
+/* incorrect */
 .class-one {
   margin: 0px;
   padding: 0%;
 }
 
-// correct
+/* correct */
 .class-one {
   margin: 0;
   padding: 0;
@@ -175,12 +174,12 @@ input[ type="checkbox" ] {
 #### Include a space after each comma in comma-separated property or function
   values.
 ```css
-// incorrect
+/* incorrect */
 .class-one {
   color: hsl( 180,50,100 );
 }
 
-// correct
+/* correct */
 .class-one {
   color: hsl( 180, 50, 100 );
 }
@@ -190,14 +189,14 @@ input[ type="checkbox" ] {
   block.
 
 ```css
-// incorrect
+/* incorrect */
 .class-one {
   width: 100%;
   height: 100%;
   margin: 20px
 }
 
-// correct
+/* correct */
 .class-one {
   width: 100%;
   height: 100%;
@@ -208,18 +207,18 @@ input[ type="checkbox" ] {
 #### Place the closing brace of a ruleset in the same column as the first
   character of the ruleset.
 ```css
-// incorrect
+/* incorrect */
 .class-one {
   width: 100%;
   height: 100%; }
 
-// incorrect
+/* incorrect */
 .class-one {
   width: 100%;
   height: 100%;
   }
 
-// correct
+/* correct */
 .class-one {
   width: 100%;
   height: 100%;
@@ -228,7 +227,7 @@ input[ type="checkbox" ] {
 
 #### Separate each ruleset by a blank line.
 ```css
-// incorrect
+/* incorrect */
 .class-one {
   width: 100%;
   height: 100%;
@@ -238,7 +237,7 @@ input[ type="checkbox" ] {
   padding: 10%;
 }
 
-// correct
+/* correct */
 .class-one {
   width: 100%;
   height: 100%;
@@ -252,12 +251,12 @@ input[ type="checkbox" ] {
 
 #### Put spaces inside brackets for better readability.
 ```css
-// incorrect
+/* incorrect */
 .class-one {
   color: hsl(180, 100, 50);
 }
 
-// correct
+/* correct */
 .class-one {
   color: hsl( 180, 100, 50 );
 }
@@ -265,14 +264,14 @@ input[ type="checkbox" ] {
 
 #### Use hyphens rather than underscores to separate class/variable names
 ```css
-// incorrect
+/* incorrect */
 .class_one {
-  // rules
+  /* rules */
 }
 
-// correct
+/* correct */
 .class-one {
-  // rules
+  /* rules */
 }
 ```
 
@@ -327,7 +326,7 @@ preprocessor in use. The following guidelines are in reference to Sass.
     @include clearfix();
     @include box-sizing(border-box);
     width: x-grid-unit(1);
-    // other declarations
+    /* other declarations */
 }
 ```
 
