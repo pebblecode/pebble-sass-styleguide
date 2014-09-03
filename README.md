@@ -22,7 +22,7 @@ Adapted from Nicolas Gallagher's [idiomatic-css](https://github.com/necolas/idio
 * Strictly enforce the agreed-upon style.
 * If in doubt when deciding upon a style use existing, common patterns.
 * Use [Sass](http://sass-lang.com) and the [SCSS syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html#sass_syntax_differences).
-*
+* Never use IDs for styling purposes. Always use classes instead.
 
 
 <a name="whitespace"></a>
@@ -38,6 +38,7 @@ Adapted from Nicolas Gallagher's [idiomatic-css](https://github.com/necolas/idio
 Aim to write code that is self documenting and easy to understand. However sometimes comments will be useful for yourself or other developers. For example
 
 Use the Sass Syntax for comments `// comment`
+
 **DO NOT** use the CSS syntax for comments `/* comment */`
 
 
@@ -45,15 +46,27 @@ Use the Sass Syntax for comments `// comment`
 ## 4. Format
 
 * Use one discrete selector per line in multi-selector rulesets.
+```sass
+// bad
+.class-one, .class two {
+
+}
+
+// good
+.class-one,
+.class two {
+
+}
+```
+
 * Include a single space before the opening brace of a ruleset.
 * Include one declaration per line in a declaration block.
 * Use one level of indentation for each declaration.
 * Include a single space after the colon of a declaration.
 * Use lowercase and shorthand hex values, e.g., `#aaa`.
-* Use single or double quotes consistently. Preference is for double quotes,
-  e.g., `content: ""`.
+* Use double quotes wherever possible, e.g., `content: ""`.
 * Quote attribute values in selectors, e.g., `input[type="checkbox"]`.
-* _Where allowed_, avoid specifying units for zero-values, e.g., `margin: 0`.
+* Avoid specifying units for zero-values, e.g., `margin: 0`.
 * Include a space after each comma in comma-separated property or function
   values.
 * Include a semi-colon at the end of the last declaration in a declaration
@@ -61,47 +74,8 @@ Use the Sass Syntax for comments `// comment`
 * Place the closing brace of a ruleset in the same column as the first
   character of the ruleset.
 * Separate each ruleset by a blank line.
-
-
-#### Declaration order
-
-If declarations are to be consistently ordered, it should be in accordance with
-a single, simple principle.
-
-Smaller teams may prefer to cluster related properties (e.g. positioning and
-box-model) together.
-
-```css
-.selector {
-    /* Positioning */
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    /* Display & Box Model */
-    display: inline-block;
-    overflow: hidden;
-    box-sizing: border-box;
-    width: 100px;
-    height: 100px;
-    padding: 10px;
-    border: 10px solid #333;
-    margin: 10px;
-
-    /* Other */
-    background: #000;
-    color: #fff;
-    font-family: sans-serif;
-    font-size: 16px;
-    text-align: right;
-}
-```
-
-Larger teams may prefer the simplicity and ease-of-maintenance that comes with
-alphabetical ordering.
+* Put spaces inside brackets for better readability.
+* Use hyphens rather than underscores to separate class/variable names
 
 #### Exceptions and slight deviations
 
@@ -122,11 +96,9 @@ be used; one example is shown below.
 
 ```css
 .selector {
-    background-image:
-        linear-gradient(#fff, #ccc),
+    background-image: linear-gradient(#fff, #ccc),
         linear-gradient(#f3c, #4ec);
-    box-shadow:
-        1px 1px 1px #000,
+    box-shadow: 1px 1px 1px #000,
         2px 2px 1px 1px #ccc inset;
 }
 ```
