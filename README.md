@@ -1,118 +1,51 @@
-# Principles of writing consistent, idiomatic CSS
+# pebble {code} CSS & Sass Style Guide
 
-The following document outlines a reasonable style guide for CSS development.
-These guidelines strongly encourage the use of existing, common, sensible
-patterns. They should be adapted as needed to create your own style guide.
+This documents outlines best practices for writting CSS & Sass @ pebble {code}
 
-This is a living document and new ideas are always welcome. Please
-contribute.
-
+Adapted from Nicolas Gallagher's [idiomatic-css](https://github.com/necolas/idiomatic-css)
 
 ## Table of contents
 
-1. [General principles](#general-principles)
+1. [General Principles](#general-principles)
 2. [Whitespace](#whitespace)
 3. [Comments](#comments)
 4. [Format](#format)
-5. [Practical example](#example)
-
-[Acknowledgements](#acknowledgements)
-
-[License](#license)
-
+5. [Practical Example](#example)
 
 <a name="general-principles"></a>
-## 1. General principles
-
-> "Part of being a good steward to a successful project is realizing that
-> writing code for yourself is a Bad Idea™. If thousands of people are using
-> your code, then write your code for maximum clarity, not your personal
-> preference of how to get clever within the spec." - Idan Gazit
+## 1. General Principles
 
 * Don't try to prematurely optimize your code; keep it readable and
-  understandable.
+  understandable. For CSS/Sass readability is generally more important than performance.
 * All code in any code-base should look like a single person typed it, even
   when many people are contributing to it.
 * Strictly enforce the agreed-upon style.
 * If in doubt when deciding upon a style use existing, common patterns.
+* Use [Sass](http://sass-lang.com) and the [`SCSS` syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html#sass_syntax_differences).
+*
 
 
 <a name="whitespace"></a>
 ## 2. Whitespace
 
-Only one style should exist across the entire source of your code-base. Always
-be consistent in your use of whitespace. Use whitespace to improve
-readability.
-
-* _Never_ mix spaces and tabs for indentation.
-* Choose between soft indents (spaces) or real tabs. Stick to your choice
-  without fail. (Preference: spaces)
-* If using spaces, choose the number of characters used per indentation level.
-  (Preference: 4 spaces)
-
-Tip: configure your editor to "show invisibles" or to automatically remove
-end-of-line whitespace.
-
-Tip: use an [EditorConfig](http://editorconfig.org/) file (or equivalent) to
-help maintain the basic whitespace conventions that have been agreed for your
-code-base.
+* Use soft-indents (spaces)
+* Each level of indentation should be 2 spaces
 
 
 <a name="comments"></a>
 ## 3. Comments
 
-Well commented code is extremely important. Take time to describe components,
-how they work, their limitations, and the way they are constructed. Don't leave
-others in the team guessing as to the purpose of uncommon or non-obvious
-code.
+Aim to write code that is self documenting and easy to understand. However sometimes comments will be useful for yourself or other developers. For example
 
-Comment style should be simple and consistent within a single code base.
+Write comments in the Sass Syntax `// comment` **NOT** the CSS syntax `/* comment */`
 
-* Place comments on a new line above their subject.
-* Keep line-length to a sensible maximum, e.g., 80 columns.
-* Make liberal use of comments to break CSS code into discrete sections.
-* Use "sentence case" comments and consistent text indentation.
+```// good comments
 
-Tip: configure your editor to provide you with shortcuts to output agreed-upon
-comment patterns.
-
-Example:
-
-```css
-/* ==========================================================================
-   Section comment block
-   ========================================================================== */
-
-/* Sub-section comment block
-   ========================================================================== */
-
-/**
- * Short description using Doxygen-style comment format
- *
- * The first sentence of the long description starts here and continues on this
- * line for a while finally concluding here at the end of this paragraph.
- *
- * The long description is ideal for more detailed explanations and
- * documentation. It can include example HTML, URLs, or any other information
- * that is deemed necessary or useful.
- *
- * @tag This is a tag named 'tag'
- *
- * TODO: This is a todo statement that describes an atomic task to be completed
- *   at a later date. It wraps after 80 characters and following lines are
- *   indented by 2 spaces.
- */
-
-/* Basic comment */
+/* bad comments */
 ```
-
 
 <a name="format"></a>
 ## 4. Format
-
-The chosen code format must ensure that code is: easy to read; easy to clearly
-comment; minimizes the chance of accidentally introducing errors; and results
-in useful diffs and blames.
 
 * Use one discrete selector per line in multi-selector rulesets.
 * Include a single space before the opening brace of a ruleset.
@@ -132,24 +65,8 @@ in useful diffs and blames.
   character of the ruleset.
 * Separate each ruleset by a blank line.
 
-```css
-.selector-1,
-.selector-2,
-.selector-3[type="text"] {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    display: block;
-    font-family: helvetica, arial, sans-serif;
-    color: #333;
-    background: #fff;
-    background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
-}
 
-.selector-a,
-.selector-b {
-    padding: 10px;
-}
+
 ```
 
 #### Declaration order
