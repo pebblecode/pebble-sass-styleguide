@@ -44,8 +44,25 @@ Use the Sass Syntax for comments `// comment`<br />
 <a name="format"></a>
 ## 4. Format
 
-#### Use one discrete selector per line in multi-selector rulesets.
+* Use one discrete selector per line in multi-selector rulesets.
+* Include a single space before the opening brace of a ruleset.
+* Include one declaration per line in a declaration block.
+* Use one (two spaces) level of indentation for each declaration.
+* Include a single space after the colon of a declaration.
+* Use lowercase and shorthand hex values, e.g., `#aaa`.
+* Use double quotes wherever possible, e.g., `content: ""`.
+* Quote attribute values in selectors, e.g., `input[ type="checkbox" ]`.
+* Avoid specifying units for zero-values, e.g., `margin: 0`.
+* Include a space after each comma in comma-separated property or function values.
+* Include a semi-colon at the end of the last declaration in a declaration block.
+* Place the closing brace of a ruleset in the same column as the first character of the
+* Separate each ruleset by a blank line.
+* Put spaces inside brackets for better readability.
+* Use hyphens rather than underscores to separate class/variable names
+* Exceptions and slight deviations
+
 ```css
+/* Use one discrete selector per line in multi-selector rulesets. */
 /* incorrect */
 .class-one, .class two {
   /* rules */
@@ -56,10 +73,8 @@ Use the Sass Syntax for comments `// comment`<br />
 .class two {
   /* rules */
 }
-```
 
-#### Include a single space before the opening brace of a ruleset.
-```css
+/* Include a single space before the opening brace of a ruleset. */
 /* incorrect */
 .class-one{
   /* rules */
@@ -69,10 +84,8 @@ Use the Sass Syntax for comments `// comment`<br />
 .class-one {
   /* rules */
 }
-```
 
-#### Include one declaration per line in a declaration block.
-```css
+/* Include one declaration per line in a declaration block. */
 /* incorrect */
 .class-one{
   width: 100%; height: 100%;
@@ -83,10 +96,8 @@ Use the Sass Syntax for comments `// comment`<br />
   width: 100%;
   height: 100%;
 }
-```
 
-#### Use one (two spaces) level of indentation for each declaration.
-```css
+/* Use one (two spaces) level of indentation for each declaration. */
 /* incorrect */
 .class-one{
   width: 100%;
@@ -100,10 +111,8 @@ padding: 10%;
   height: 100%;
   padding: 10%;
 }
-```
 
-#### Include a single space after the colon of a declaration.
-```css
+/* Include a single space after the colon of a declaration. */
 /* incorrect */
 .class-one{
   width:100%;
@@ -113,10 +122,8 @@ padding: 10%;
 .class-one {
   width: 100%;
 }
-```
 
-#### Use lowercase and shorthand hex values, e.g., `#aaa`.
-```css
+/* Use lowercase and shorthand hex values, e.g., `#aaa`. */
 /* incorrect */
 .class-one{
   background-color: #EE4F7E;
@@ -128,10 +135,8 @@ padding: 10%;
   background-color: #ee4f7e;
   color: #f09;
 }
-```
 
-#### Use double quotes wherever possible, e.g., `content: ""`.
-```css
+/* Use double quotes wherever possible, e.g., `content: ""`. */
 /* incorrect */
 .class-one{
   background-image: url( 'img/pic.jpg' );
@@ -141,10 +146,8 @@ padding: 10%;
 .class-one {
   background-image: url( "img/pic.jpg" );
 }
-```
 
-#### Quote attribute values in selectors, e.g., `input[ type="checkbox" ]`.
-```css
+/* Quote attribute values in selectors, e.g., `input[ type="checkbox" ]`. */
 /* incorrect */
 input[ type=checkbox ] {
   /* rules */
@@ -154,10 +157,8 @@ input[ type=checkbox ] {
 input[ type="checkbox" ] {
   /* rules */
 }
-```
 
-#### Avoid specifying units for zero-values, e.g., `margin: 0`.
-```css
+/* Avoid specifying units for zero-values, e.g., `margin: 0`. */
 /* incorrect */
 .class-one {
   margin: 0px;
@@ -169,11 +170,8 @@ input[ type="checkbox" ] {
   margin: 0;
   padding: 0;
 }
-```
 
-#### Include a space after each comma in comma-separated property or function
-  values.
-```css
+/* Include a space after each comma in comma-separated property or function values. */
 /* incorrect */
 .class-one {
   color: hsl( 180,50,100 );
@@ -185,9 +183,8 @@ input[ type="checkbox" ] {
 }
 ```
 
-#### Include a semi-colon at the end of the last declaration in a declaration
-  block.
 
+/* Include a semi-colon at the end of the last declaration in a declaration block. */
 ```css
 /* incorrect */
 .class-one {
@@ -202,11 +199,8 @@ input[ type="checkbox" ] {
   height: 100%;
   margin: 20px;
 }
-```
 
-#### Place the closing brace of a ruleset in the same column as the first
-  character of the ruleset.
-```css
+/* Place the closing brace of a ruleset in the same column as the first character of the ruleset. */
 /* incorrect */
 .class-one {
   width: 100%;
@@ -223,10 +217,8 @@ input[ type="checkbox" ] {
   width: 100%;
   height: 100%;
 }
-```
 
-#### Separate each ruleset by a blank line.
-```css
+/* Separate each ruleset by a blank line. */
 /* incorrect */
 .class-one {
   width: 100%;
@@ -247,10 +239,8 @@ input[ type="checkbox" ] {
   margin: 10%;
   padding: 10%;
 }
-```
 
-#### Put spaces inside brackets for better readability.
-```css
+/* Put spaces inside brackets for better readability. */
 /* incorrect */
 .class-one {
   color: hsl(180, 100, 50);
@@ -260,10 +250,8 @@ input[ type="checkbox" ] {
 .class-one {
   color: hsl( 180, 100, 50 );
 }
-```
 
-#### Use hyphens rather than underscores to separate class/variable names
-```css
+/* Use hyphens rather than underscores to separate class/variable names */
 /* incorrect */
 .class_one {
   /* rules */
