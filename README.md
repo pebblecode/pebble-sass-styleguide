@@ -45,37 +45,236 @@ Use the Sass Syntax for comments `// comment`
 <a name="format"></a>
 ## 4. Format
 
-* Use one discrete selector per line in multi-selector rulesets.
+### Use one discrete selector per line in multi-selector rulesets.
 ```sass
-// bad
+// incorrect
 .class-one, .class two {
-
+  // rules
 }
 
-// good
+// correct
 .class-one,
 .class two {
-
+  // rules
 }
 ```
 
 * Include a single space before the opening brace of a ruleset.
+```sass
+// incorrect
+.class-one{
+  // rules
+}
+
+// correct
+.class-one {
+  // rules
+}
+```
+
 * Include one declaration per line in a declaration block.
-* Use one level of indentation for each declaration.
+```sass
+// incorrect
+.class-one{
+  width: 100%; height: 100%;
+}
+
+// correct
+.class-one {
+  width: 100%;
+  height: 100%;
+}
+```
+
+* Use one (two spaces) level of indentation for each declaration.
+```sass
+// incorrect
+.class-one{
+  width: 100%;
+    height: 100%;
+padding: 10%;
+}
+
+// correct
+.class-one {
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+}
+```
+
 * Include a single space after the colon of a declaration.
+```sass
+// incorrect
+.class-one{
+  width:100%;
+}
+
+// correct
+.class-one {
+  width: 100%;
+}
+```
+
 * Use lowercase and shorthand hex values, e.g., `#aaa`.
+```sass
+// incorrect
+.class-one{
+  background-color: #EE4F7E;
+  color: #F09;
+}
+
+// correct
+.class-one {
+  background-color: #ee4f7e;
+  color: #f09;
+}
+```
+
 * Use double quotes wherever possible, e.g., `content: ""`.
-* Quote attribute values in selectors, e.g., `input[type="checkbox"]`.
+```sass
+// incorrect
+.class-one{
+  background-image: url( 'img/pic.jpg' );
+}
+
+// correct
+.class-one {
+  background-image: url( "img/pic.jpg" );
+}
+```
+
+* Quote attribute values in selectors, e.g., `input[ type="checkbox" ]`.
+```sass
+// incorrect
+input[ type=checkbox ] {
+  // rules
+}
+
+// correct
+input[ type="checkbox" ] {
+  // rules
+}
+```
+
 * Avoid specifying units for zero-values, e.g., `margin: 0`.
+```sass
+// incorrect
+.class-one {
+  margin: 0px;
+  padding: 0%;
+}
+
+// correct
+.class-one {
+  margin: 0;
+  padding: 0;
+}
+```
+
 * Include a space after each comma in comma-separated property or function
   values.
+```sass
+// incorrect
+.class-one {
+  color: hsl( 180,50,100 );
+}
+
+// correct
+.class-one {
+  color: hsl( 180, 50, 100 );
+}
+```
+
 * Include a semi-colon at the end of the last declaration in a declaration
   block.
+
+```sass
+// incorrect
+.class-one {
+  width: 100%;
+  height: 100%;
+  margin: 20px
+}
+
+// correct
+.class-one {
+  width: 100%;
+  height: 100%;
+  margin: 20px;
+}
+```
+
 * Place the closing brace of a ruleset in the same column as the first
   character of the ruleset.
+```sass
+// incorrect
+.class-one {
+  width: 100%;
+  height: 100%; }
+
+// incorrect
+.class-one {
+  width: 100%;
+  height: 100%;
+  }
+
+// correct
+.class-one {
+  width: 100%;
+  height: 100%;
+}
+```
+
 * Separate each ruleset by a blank line.
+```sass
+// incorrect
+.class-one {
+  width: 100%;
+  height: 100%;
+}
+.class-two {
+  margin: 10%;
+  padding: 10%;
+}
+
+// correct
+.class-one {
+  width: 100%;
+  height: 100%;
+}
+
+.class-two {
+  margin: 10%;
+  padding: 10%;
+}
+```
+
 * Put spaces inside brackets for better readability.
+```sass
+// incorrect
+.class-one {
+  color: hsl(180, 100, 50);
+}
+
+// correct
+.class-one {
+  color: hsl( 180, 100, 50 );
+}
+```
+
 * Use hyphens rather than underscores to separate class/variable names
+```sass
+// incorrect
+.class_one {
+  // rules
+}
+
+// correct
+.class-one {
+  // rules
+}
+```
 
 #### Exceptions and slight deviations
 
@@ -96,10 +295,10 @@ be used; one example is shown below.
 
 ```css
 .selector {
-    background-image: linear-gradient(#fff, #ccc),
-        linear-gradient(#f3c, #4ec);
-    box-shadow: 1px 1px 1px #000,
-        2px 2px 1px 1px #ccc inset;
+  background-image: linear-gradient(#fff, #ccc),
+                    linear-gradient(#f3c, #4ec);
+  box-shadow: 1px 1px 1px #000,
+              2px 2px 1px 1px #ccc inset;
 }
 ```
 
