@@ -63,6 +63,7 @@ Use the Sass Syntax for comments `// comment`<br />
 
 ```css
 /* Use one discrete selector per line in multi-selector rulesets. */
+/* ========================================================================== */
 /* incorrect */
 .class-one, .class two {
   /* rules */
@@ -75,6 +76,7 @@ Use the Sass Syntax for comments `// comment`<br />
 }
 
 /* Include a single space before the opening brace of a ruleset. */
+/* ========================================================================== */
 /* incorrect */
 .class-one{
   /* rules */
@@ -86,6 +88,7 @@ Use the Sass Syntax for comments `// comment`<br />
 }
 
 /* Include one declaration per line in a declaration block. */
+/* ========================================================================== */
 /* incorrect */
 .class-one{
   width: 100%; height: 100%;
@@ -98,6 +101,7 @@ Use the Sass Syntax for comments `// comment`<br />
 }
 
 /* Use one (two spaces) level of indentation for each declaration. */
+/* ========================================================================== */
 /* incorrect */
 .class-one{
   width: 100%;
@@ -113,6 +117,7 @@ padding: 10%;
 }
 
 /* Include a single space after the colon of a declaration. */
+/* ========================================================================== */
 /* incorrect */
 .class-one{
   width:100%;
@@ -124,6 +129,7 @@ padding: 10%;
 }
 
 /* Use lowercase and shorthand hex values, e.g., `#aaa`. */
+/* ========================================================================== */
 /* incorrect */
 .class-one{
   background-color: #EE4F7E;
@@ -137,6 +143,7 @@ padding: 10%;
 }
 
 /* Use double quotes wherever possible, e.g., `content: ""`. */
+/* ========================================================================== */
 /* incorrect */
 .class-one{
   background-image: url( 'img/pic.jpg' );
@@ -148,6 +155,7 @@ padding: 10%;
 }
 
 /* Quote attribute values in selectors, e.g., `input[ type="checkbox" ]`. */
+/* ========================================================================== */
 /* incorrect */
 input[ type=checkbox ] {
   /* rules */
@@ -159,6 +167,7 @@ input[ type="checkbox" ] {
 }
 
 /* Avoid specifying units for zero-values, e.g., `margin: 0`. */
+/* ========================================================================== */
 /* incorrect */
 .class-one {
   margin: 0px;
@@ -172,6 +181,7 @@ input[ type="checkbox" ] {
 }
 
 /* Include a space after each comma in comma-separated property or function values. */
+/* ========================================================================== */
 /* incorrect */
 .class-one {
   color: hsl( 180,50,100 );
@@ -181,11 +191,9 @@ input[ type="checkbox" ] {
 .class-one {
   color: hsl( 180, 50, 100 );
 }
-```
-
 
 /* Include a semi-colon at the end of the last declaration in a declaration block. */
-```css
+/* ========================================================================== */
 /* incorrect */
 .class-one {
   width: 100%;
@@ -201,6 +209,7 @@ input[ type="checkbox" ] {
 }
 
 /* Place the closing brace of a ruleset in the same column as the first character of the ruleset. */
+/* ========================================================================== */
 /* incorrect */
 .class-one {
   width: 100%;
@@ -219,6 +228,7 @@ input[ type="checkbox" ] {
 }
 
 /* Separate each ruleset by a blank line. */
+/* ========================================================================== */
 /* incorrect */
 .class-one {
   width: 100%;
@@ -241,6 +251,7 @@ input[ type="checkbox" ] {
 }
 
 /* Put spaces inside brackets for better readability. */
+/* ========================================================================== */
 /* incorrect */
 .class-one {
   color: hsl(180, 100, 50);
@@ -252,6 +263,7 @@ input[ type="checkbox" ] {
 }
 
 /* Use hyphens rather than underscores to separate class/variable names */
+/* ========================================================================== */
 /* incorrect */
 .class_one {
   /* rules */
