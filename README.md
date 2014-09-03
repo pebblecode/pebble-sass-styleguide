@@ -75,16 +75,16 @@ Use the Sass Syntax for comments `// comment`<br />
 Declaration order should be as follows...
 
 * Scoped variables.
-* New line.
+* _New line._
 * @extend
 * @import
-* New line
+* _New line_
 * All rules for top-level selector
-* New line
+* _New line_
 * Any nested elements
-* New line
-* Any pseudo classes e.g.`:hover, :focus, ::before, ::after`
-* New line
+* _New line_
+* Any pseudo classes e.g. `:hover, :focus, ::before, ::after`
+* _New line_
 * Any media queries
 
 #### Exceptions and slight deviations
@@ -117,6 +117,8 @@ be used; one example is shown below.
 ## 5. Example SCSS
 
 Examples of all the above formating guides can be found in `examples.scss`.
+
+---
 
 Based on a work at
 [github.com/necolas/idiomatic-css](https://github.com/necolas/idiomatic-css).
